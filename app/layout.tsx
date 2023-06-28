@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Heebo, Rubik } from "next/font/google";
 import React from "react";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 const headFont = Rubik({
   subsets: ["latin"],
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${bodyFont.variable} ${headFont.variable}`}>
-        <Navbar />
+        <Sidebar />
         {children}
       </body>
     </html>

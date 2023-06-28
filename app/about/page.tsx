@@ -1,23 +1,21 @@
 import Image from "next/image";
 import React from "react";
 import me from "../../public/mick2.webp";
-import Link from "next/link";
 
-
-export default function page() {
+export default function page(): JSX.Element {
   return (
     <div className='page'>
-      <div className='place-self-center '>
-        <div className='bg-black/70 p-16 rounded-xl'>
+      <div className='place-self-center mt-44 mb-24 lg:m-0'>
+        <div className='bg-gradient-to-l from-neutral-900 to-black mt-3 p-10 rounded-xl'>
           <div className='flex flex-col items-center justify-center lg:flex-row gap-10'>
             <Image
               src={me}
               alt="image of Michael O'Reilly"
-              quality={100}
+              quality={75}
               loading='lazy'
-              className='rounded-2xl w-96 border-4 object-cover border-gray-200 shadow-xl'
+              className='rounded-2xl w-96 border-4 object-cover border-rose-500 shadow-xl'
             />
-            <div className='max-w-xl prose prose-invert prose-h1:font-head prose-a:text-rose-500 font-body'>
+            <div className='max-w-xl prose prose-invert prose-h1:font-head font-body'>
               <h1>About me</h1>
               <p>Hello there! Thank you for taking the time to read my bio.</p>
               <p>
@@ -26,16 +24,10 @@ export default function page() {
                 my head stuck in the laptop, coding my next big app idea!
               </p>
               <p>
-                My day job sees me managing a busy{" "}
-                <Link href='/'>
-                  <strong>eCommerce</strong>
-                </Link>{" "}
-                website. I have an extensive background in{" "}
-                <Link href='/'>
-                  <strong>sales and marketing</strong>
-                </Link>
-                , this coupled years of self-thought creativity make me an
-                effective leader of the team.
+                My day job sees me managing a busyeCommerce website. I have an
+                extensive background in sales and marketing , this coupled years
+                of self-thought creativity make me an effective leader of the
+                team.
               </p>
               <p>
                 I am a trained sound engineer, self-thought
@@ -43,28 +35,6 @@ export default function page() {
                 illustration and photography, to building and architecture.
               </p>
             </div>
-          </div>
-        </div>
-        <div className='flex justify-between'>
-        <Link
-              className='flex items-center underline hover:text-sky-500 group'
-              href='/'
-            >
-              go home
-            </Link>
-          <div className='flex gap-4'>
-            <Link
-              className='flex items-center underline hover:text-amber-500 group'
-              href='/skills'
-            >
-              view skills
-            </Link>
-            <Link
-              className='flex items-center underline hover:text-emerald-500 group'
-              href='/skills'
-            >
-              view experience
-            </Link>
           </div>
         </div>
       </div>
