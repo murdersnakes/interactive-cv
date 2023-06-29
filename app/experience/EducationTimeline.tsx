@@ -13,7 +13,7 @@ export default function EducationTimeline(): JSX.Element {
         <div className='prose prose-invert pb-14'>
           <p className='text-sm font-body text-sky-300 m-0'>2021</p>
 
-          <div className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl '>
+          <div className='flex flex-col text-left p-5 mt-3 rounded-xl '>
             <h4>Social Media Strategy for Business | Pitman Training</h4>
             <p>
               I gained valuable insights into the benefits of social media,
@@ -34,7 +34,7 @@ export default function EducationTimeline(): JSX.Element {
         <div className='prose prose-invert pb-14'>
           <p className='text-sm font-body text-sky-300 m-0'>2018</p>
 
-          <div className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl '>
+          <div className='flex flex-col text-left p-5 mt-3 rounded-xl '>
             <h4>Excel Expert | Pitman Training</h4>
             <p>
               Completing the Excel Expert course enhanced my proficiency in
@@ -55,7 +55,7 @@ export default function EducationTimeline(): JSX.Element {
         <div className='prose prose-invert pb-14'>
           <p className='text-sm font-body text-sky-300 m-0'>2010</p>
 
-          <div className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl '>
+          <div className='flex flex-col text-left p-5 mt-3 rounded-xl '>
             <h4>FETAC Level 7 Sound Engineering | Pulse College</h4>
             <p>
               I attained FETAC Level 7 certification in Sound Engineering,
@@ -73,9 +73,9 @@ export default function EducationTimeline(): JSX.Element {
           <div className='rounded-full w-6 h-6 bg-sky-300'></div>
         </div>
         <div className='prose prose-invert pb-14'>
-          <p className='text-sm font-body text-sky-300 m-0'>2018</p>
+          <p className='text-sm font-body text-sky-300 m-0'>2008</p>
 
-          <div className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl '>
+          <div className='flex flex-col text-left p-5 mt-3 rounded-xl '>
             <h4>Leaving Certificate | Beneavin College</h4>
             <p>
               This qualification demonstrates a broad range of academic

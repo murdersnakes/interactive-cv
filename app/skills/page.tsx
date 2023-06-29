@@ -129,60 +129,65 @@ export default function page():JSX.Element {
     <div className='page'>
       <div className='place-self-center mt-56 mb-24 lg:m-0'>
         <div className='grid lg:grid-cols-3 gap-10'>
-          <div className='bg-gradient-to-l from-neutral-900 to-black mt-3 p-10 rounded-xl'>
-            <h2 className='font-head text-xl font-bold'>Business</h2>
-
-            {businessSkills.map((skill: Skill): JSX.Element => {
-              const icon = React.createElement(skill.icon);
-              return (
-                <div className='mt-4 flex items-center gap-2' key={skill.name}>
-                  {icon}
-                  <div>
-                    <h3 className='font-body font-bold'>{skill.name}</h3>
-                    <div
-                      style={{ width: `${skill.value * 1.8}px` }}
-                      className={`bg-amber-300 h-2 mt-2 rounded-xl`}
-                    ></div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className='p-6 rounded-xl'>
+            <h2 className='font-head text-xl font-bold mb-2'>Business</h2>
+            <ul>
+              {businessSkills.map((skill: Skill): JSX.Element => {
+                const icon = React.createElement(skill.icon);
+                return (
+                  <li className='flex items-center gap-3 border-t border-white/10 py-4' key={skill.name}>
+                    {icon}
+                    <div>
+                      <h3 className='font-body font-bold'>{skill.name}</h3>
+                      <div
+                        style={{ width: `${skill.value * 1.8}px` }}
+                        className={`bg-amber-300 h-1 rounded-xl`}
+                      ></div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          <div className='bg-gradient-to-l from-neutral-900 to-black mt-3 rounded-xl p-10 '>
-            <h2 className='font-head text-xl font-bold'>Coding</h2>
-            {techSkills.map((skill: Skill): JSX.Element => {
-              const icon = React.createElement(skill.icon);
-              return (
-                <div className='mt-4 flex items-center gap-2' key={skill.name}>
-                  {icon}
-                  <div>
-                    <h3 className='font-body font-bold'>{skill.name}</h3>
-                    <div
-                      style={{ width: `${skill.value * 1.8}px` }}
-                      className={`bg-amber-300 h-2 mt-2 rounded-xl`}
-                    ></div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className='rounded-xl p-6 '>
+            <h2 className='font-head text-xl font-bold mb-2'>Coding</h2>
+            <ul>
+              {techSkills.map((skill: Skill): JSX.Element => {
+                const icon = React.createElement(skill.icon);
+                return (
+                  <li className='flex items-center gap-3 border-t border-white/10 py-4' key={skill.name}>
+                    {icon}
+                    <div>
+                      <h3 className='font-body font-bold'>{skill.name}</h3>
+                      <div
+                        style={{ width: `${skill.value * 1.9}px` }}
+                        className={` bg-amber-300 h-1 rounded-xl`}
+                      ></div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          <div className='bg-gradient-to-l from-neutral-900 to-black mt-3 p-10 rounded-xl '>
-            <h2 className='font-head text-xl font-bold'>Creativity</h2>
-            {creativeSkills.map((skill: Skill): JSX.Element => {
-              const icon = React.createElement(skill.icon);
-              return (
-                <div className='mt-4 flex items-center gap-2' key={skill.name}>
-                  {icon}
-                  <div>
-                    <h3 className='font-body font-bold'>{skill.name}</h3>
-                    <div
-                      style={{ width: `${skill.value * 1.8}px` }}
-                      className={`bg-amber-300 h-2 mt-2 rounded-xl`}
-                    ></div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className='p-6 rounded-xl '>
+            <h2 className='font-head text-xl font-bold mb-2'>Creativity</h2>
+            <ul>
+              {creativeSkills.map((skill: Skill): JSX.Element => {
+                const icon = React.createElement(skill.icon);
+                return (
+                  <li className='flex items-center gap-3 border-t border-white/10 py-4' key={skill.name}>
+                    {icon}
+                    <div>
+                      <h3 className='font-body font-bold'>{skill.name}</h3>
+                      <div
+                        style={{ width: `${skill.value * 1.8}px` }}
+                        className={`bg-amber-300 h-1 rounded-xl`}
+                      ></div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

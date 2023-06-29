@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Heebo, Rubik } from "next/font/google";
+import { Heebo, Inter } from "next/font/google";
 import React from "react";
 import Sidebar from "./components/Sidebar";
 
-const headFont = Rubik({
+const headFont = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-head",

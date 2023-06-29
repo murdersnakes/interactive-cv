@@ -27,7 +27,7 @@ export default function WorkTimeline(): JSX.Element {
 
           <button
             onClick={(): void => handleToggle("section1")}
-            className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl hover:ring-2 hover:ring-gray-500 '
+            className='flex flex-col text-left  p-5 mt-3 rounded-xl hover:ring-1 hover:ring-gray-200 group '
           >
             <h4>IPL Group | eCommerce Manager</h4>
             <p>
@@ -82,7 +82,7 @@ export default function WorkTimeline(): JSX.Element {
                 </li>
               </ul>
             )}
-            <span className='underline gap-2 flex items-center justify-self-end'>
+            <span className='group-hover:underline gap-2 flex items-center ml-auto'>
               {sectionVisibility["section1"] ? "close" : "expand"}
               {sectionVisibility["section1"] ? <TbArrowUp /> : <TbArrowDown />}
             </span>
@@ -99,7 +99,7 @@ export default function WorkTimeline(): JSX.Element {
           <p className='text-sm font-body text-emerald-300 m-0'>2019 - 2021</p>
           <button
             onClick={(): void => handleToggle("section2")}
-            className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl hover:ring-2 hover:ring-gray-500 '
+            className='flex flex-col text-left  p-5 mt-3 rounded-xl hover:ring-1 hover:ring-gray-200 group '
           >
             <h4>Toolfast | Brand Manager</h4>
             <p>
@@ -144,7 +144,7 @@ export default function WorkTimeline(): JSX.Element {
                 </li>
               </ul>
             )}
-            <span className='underline gap-2 flex items-center justify-self-end'>
+            <span className='group-hover:underline gap-2 flex items-center ml-auto'>
               {sectionVisibility["section2"] ? "close" : "expand"}
               {sectionVisibility["section2"] ? <TbArrowUp /> : <TbArrowDown />}
             </span>
@@ -161,7 +161,7 @@ export default function WorkTimeline(): JSX.Element {
           <p className='text-sm font-body text-emerald-300 m-0'>2015 - 2019</p>
           <button
             onClick={(): void => handleToggle("section3")}
-            className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl hover:ring-2 hover:ring-gray-500 '
+            className='flex flex-col text-left  p-5 mt-3 rounded-xl hover:ring-1 hover:ring-gray-200 group '
           >
             <h4>Soudal | Technical Field Sales</h4>
             <p>
@@ -192,7 +192,7 @@ export default function WorkTimeline(): JSX.Element {
                 </li>
               </ul>
             )}
-            <span className='underline gap-2 flex items-center justify-self-end'>
+            <span className='group-hover:underline gap-2 flex items-center ml-auto'>
               {sectionVisibility["section3"] ? "close" : "expand"}
               {sectionVisibility["section3"] ? <TbArrowUp /> : <TbArrowDown />}
             </span>
@@ -209,7 +209,7 @@ export default function WorkTimeline(): JSX.Element {
           <p className='text-sm font-body text-emerald-300 m-0'>2015 - 2015</p>
           <button
             onClick={(): void => handleToggle("section4")}
-            className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl hover:ring-2 hover:ring-gray-500 '
+            className='flex flex-col text-left  p-5 mt-3 rounded-xl hover:ring-1 hover:ring-gray-200 group '
           >
             <h4>Three | B2B Sales Rep</h4>
             <p>
@@ -239,7 +239,7 @@ export default function WorkTimeline(): JSX.Element {
                 </li>
               </ul>
             )}
-            <span className='underline gap-2 flex items-center justify-self-end'>
+            <span className='group-hover:underline gap-2 flex items-center ml-auto'>
               {sectionVisibility["section4"] ? "close" : "expand"}
               {sectionVisibility["section4"] ? <TbArrowUp /> : <TbArrowDown />}
             </span>
@@ -254,7 +254,7 @@ export default function WorkTimeline(): JSX.Element {
           <p className='text-sm font-body text-emerald-300 m-0'>2013 - 2015</p>
           <button
             onClick={(): void => handleToggle("section5")}
-            className='flex flex-col text-left bg-gradient-to-l from-neutral-900 to-black p-5 mt-3 rounded-xl hover:ring-2 hover:ring-gray-500 '
+            className='flex flex-col text-left  p-5 mt-3 rounded-xl hover:ring-1 hover:ring-gray-200 group '
           >
             <h4>Eir | B2C Sales Rep</h4>
             <p>
@@ -280,7 +280,7 @@ export default function WorkTimeline(): JSX.Element {
                 </li>
               </ul>
             )}
-            <span className='underline gap-2 flex items-center justify-self-end'>
+            <span className='group-hover:underline gap-2 flex items-center ml-auto'>
               {sectionVisibility["section5"] ? "close" : "expand"}
               {sectionVisibility["section5"] ? <TbArrowUp /> : <TbArrowDown />}
             </span>
