@@ -22,6 +22,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
+
 @layer base{
   body{
     @apply font-body
@@ -35,4 +36,42 @@ body::-webkit-scrollbar-thumb {
     @apply min-h-screen grid
   }
 
+  .navlink{
+    @apply font-head flex items-center p-2 m-1 rounded-r-full rounded-l-full bg-transparent transition-colors duration-300 ease-linear
+  }
+}
+
+
+.navlink:hover {
+  background-color: currentColor;  /* Fallback color */
+}
+
+.navlink:hover.bg-about, .bg-about.active {
+  background-color: #f43f5e;
+  color:black
+}
+
+.navlink:hover.bg-skills, .bg-skills.active {
+  background-color: #f59e0b;
+  color:black
+}
+
+.navlink:hover.bg-experience, .bg-experience.active {
+  background-color: #10b981;
+  color:black
+}
+
+.navlink:hover.bg-email, .bg-email.active {
+  background-color: #8b5cf6;
+  color:black
+}
+
+.navlink:hover.bg-phone, .bg-phone.active {
+  background-color: #84cc16;
+  color:black
+}
+
+.navlink:hover.bg-linkedin, .bg-linkedin.active {
+  background-color: #0891b2;
+  color:black
 }

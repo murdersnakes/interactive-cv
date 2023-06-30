@@ -7,7 +7,6 @@ import {
   TbAward,
   TbBrandLinkedin,
   TbChartBar,
-  TbHome,
   TbMail,
   TbMenu2,
   TbPhone,
@@ -16,123 +15,125 @@ import {
 } from "react-icons/tb";
 import { motion } from "framer-motion";
 
+const navLinks = [
+  {
+    name: "About",
+    icon: TbUser,
+    path: "/",
+  },
+  {
+    name: "Skills",
+    icon: TbChartBar,
+    path: "/skills",
+  },
+  {
+    name: "Experience",
+    icon: TbAward,
+    path: "/experience",
+  },
+];
+
+const contactLinks = [
+  {
+    name: "Email",
+    icon: TbMail,
+    path: "mailto:michaeloreilly101@yahoo.ie",
+  },
+  {
+    name: "Phone",
+    icon: TbPhone,
+    path: "tel:00353896083228",
+  },
+  {
+    name: "LinkedIn",
+    icon: TbBrandLinkedin,
+    path: "https://www.linkedin.com/in/michael-o-reilly-536a85bb/",
+  },
+];
+
 export default function Sidebar(): JSX.Element {
   const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = (): void => setIsOpen(!isOpen);
 
-  const menuWidth = {
-    open: { width: "250px" },
-    closed: { width: "100px" },
-  };
-
-  const fadeText = {
-    open: { opacity: 1, width: "100%" },
-    closed: { opacity: 0, width: "0%" },
+  //animation variants
+  const textElements = {
+    open: { opacity: 1, width: "auto" },
+    closed: { opacity: 0, width: "0px" },
   };
 
   return (
-    <div>
-      <motion.div
-        initial='closed'
-        animate={isOpen == true ? "open" : "closed"}
-        variants={menuWidth}
-        className='fixed left-0 top-0 h-[calc(100%-1rem)] flex flex-col bg-white/10 backdrop-blur-sm text-white text-lg font-body p-[1rem] m-2 shadow-xl gap-4 rounded-2xl opacity-50 hover:opacity-100'
-        style={{ originX: 0 }}
-      >
-        <button
-          onClick={toggleSidebar}
-          className={
-            isOpen == true
-              ? "flex justify-center items-center rounded-full w-12 h-12 bg-red-700 hover:ring ring-white"
-              : "flex justify-center items-center rounded-full w-12 h-12 bg-sky-500 ring ring-white hover:bg-sky-400"
-          }
-        >
-          {isOpen == true ? <TbX /> : <TbMenu2 />}
+    <div className=' text-xl fixed left-0 top-0 h-[calc(100%-1rem)] p-[1rem] m-2 bg-neutral-800 rounded-2xl'>
+      <div className="">
+        <button className={`bg-transparent  rounded-xl p-3 mx-auto ${isOpen ? 'bg-red-500/50 hover:bg-red-500/75' : 'hover:bg-green-500/50'}`} onClick={toggleSidebar}>
+          {isOpen ? <TbX /> : <TbMenu2 />}
         </button>
-        <div>
-          <motion.div
-            initial='closed'
-            animate={isOpen == true ? "open" : "closed"}
-            variants={fadeText}
-            style={{ originX: 0 }}
-          >
-            <p className='text-sm font-head font-bold uppercase'>Navigate</p>
-            <div className='h-0.5 w-full bg-gray-500'></div>
-          </motion.div>
-          <ul className='py-5'>
-            <li>
+      </div>
+      <ul className='mt-10 flex flex-col gap-4'>
+        <motion.header
+          animate={isOpen ? "open" : "closed"}
+          variants={textElements}
+          initial='closed'
+          className='text-sm uppercase'
+        >
+          Navigate
+        </motion.header>
+        {navLinks.map((link): JSX.Element => {
+          const icon = React.createElement(link.icon);
+          const isActive = pathname === link.path;
+          return (
+            <li key={link.name}>
               <Link
-                className={
-                  "flex hover:bg-gray-100 hover:text-black h-12 my-2 rounded-r-full rounded-l-full"
-                }
-                href='/'
+                href={link.path}
+                className={`flex items-center rounded-xl p-1 ${isActive ? 'bg-white/20' : 'bg-transparent hover:bg-white/10'}`}
               >
-                <TbHome />
-                {isOpen && <span>Home</span>}
+                <span className='p-2'>{icon}</span>
+                <motion.span
+                  animate={isOpen ? "open" : "closed"}
+                  variants={textElements}
+                  initial='closed'
+                  className=''
+                >
+                  {link.name}
+                </motion.span>
               </Link>
             </li>
-            <li>
+          );
+        })}
+      </ul>
+      <ul className='mt-10 flex flex-col gap-4'>
+        <motion.header
+          animate={isOpen ? "open" : "closed"}
+          variants={textElements}
+          initial='closed'
+          className='text-sm uppercase'
+        >
+          Contact
+        </motion.header>
+        {contactLinks.map((link): JSX.Element => {
+          const icon = React.createElement(link.icon);
+          return (
+            <li key={link.name}>
               <Link
-                className='flex hover:bg-amber-500 hover:text-black h-12 my-2 rounded-r-full rounded-l-full'
-                href='/skills'
+                href={link.path}
+                target={link.name === "LinkedIn" ? "_blank" : ""}
+                className='flex items-center bg-transparent hover:bg-white/10 rounded-xl p-1'
               >
-                <TbChartBar />
-                {isOpen && <span>Home</span>}
+                <span className='p-2'>{icon}</span>
+                <motion.span
+                  animate={isOpen ? "open" : "closed"}
+                  variants={textElements}
+                  initial='closed'
+                  className=''
+                >
+                  {link.name}
+                </motion.span>
               </Link>
             </li>
-            <li>
-              <Link
-                className='flex hover:bg-emerald-500 hover:text-black h-12 my-2 rounded-r-full rounded-l-full'
-                href='/experience'
-              >
-                <TbAward />
-                {isOpen && <span>Home</span>}
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <motion.div
-            initial='closed'
-            animate={isOpen == true ? "open" : "closed"}
-            variants={fadeText}
-          >
-            <p className='text-sm font-head font-bold uppercase'>Contact</p>
-            <div className='h-0.5 w-full bg-gray-500'></div>
-          </motion.div>
-          <ul className='py-5'>
-            <li>
-              <Link
-                className='flex hover:bg-lime-500 hover:text-black h-12 my-2 rounded-r-full rounded-l-full'
-                href='tel:00353896083228'
-              >
-                <TbPhone />
-                {isOpen && <span>Home</span>}
-              </Link>
-            </li>
-            <li>
-              <Link
-                className='flex hover:bg-amber-500 hover:text-black h-12 my-2 rounded-r-full rounded-l-full'
-                href='mailto:michaeloreilly101@yahoo.ie'
-              >
-                <TbMail />
-                {isOpen && <span>Home</span>}
-              </Link>
-            </li>
-            <li>
-              <Link
-                className='flex hover:bg-[#0072b1] h-12 my-2 rounded-r-full rounded-l-full'
-                href='https://www.linkedin.com/in/michael-o-reilly-536a85bb/'
-                target='_blank'
-              >
-                <TbBrandLinkedin />
-                {isOpen && <span>Home</span>}
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </motion.div>
+          );
+        })}
+      </ul>
     </div>
   );
 }

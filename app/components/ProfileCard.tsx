@@ -12,7 +12,7 @@ export default function ProfileCard(): JSX.Element {
 
   const variants = {
     open: { opacity: 1, height: "auto" },
-    closed: { opacity: 0, height: "0" },
+    closed: { opacity: 0, height: "0", display: "none" },
   };
 
   return (
@@ -46,14 +46,15 @@ export default function ProfileCard(): JSX.Element {
           </button>
         </p>
         <motion.div
-          initial="closed"
+          initial='closed'
           animate={readMoreOpen ? "open" : "closed"}
           variants={variants}
+          className=""
         >
           <p className='py-2'>
             I am a trained sound engineer, self-thought multi-instrumentalist
-            and lover of all things artistic, from illustration and
-            photography, to building and architecture.
+            and lover of all things artistic, from illustration and photography,
+            to building and architecture.
           </p>
           <p className='py-2'>
             When i&apos;m not enjoying a walk on Bettystown beach with my
@@ -65,7 +66,7 @@ export default function ProfileCard(): JSX.Element {
         <ul className='py-5 flex justify-center gap-2'>
           <li>
             <Link
-              className='block bg-white text-black text-2xl rounded-full p-2'
+              className='z-40 block bg-white text-black text-2xl rounded-full p-2 hover:bg-lime-500'
               href='tel:00353896083228'
             >
               <TbPhone size={25} />
