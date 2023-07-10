@@ -53,7 +53,7 @@ export default function Skills(): JSX.Element {
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.value * 1.8}px` }}
-                    transition={{ duration: 1, easings: "easeOut", delay: 0.3 }}
+                    transition={{ duration: 1, easings: "easeOut", delay: 0.2 }}
                     className={`bg-amber-300 h-1 rounded-xl`}
                   />
                 </div>
@@ -78,7 +78,7 @@ export default function Skills(): JSX.Element {
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.value * 1.8}px` }}
-                    transition={{ duration: 1, easings: "easeOut", delay: 0.6 }}
+                    transition={{ duration: 1, easings: "easeOut", delay: 0.4 }}
                     className={`bg-amber-300 h-1 rounded-xl`}
                   />
                 </div>
